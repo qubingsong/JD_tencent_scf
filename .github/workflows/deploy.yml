@@ -48,6 +48,7 @@ jobs:
         if: "${{ env.TENCENT_SECRET_ID != '' && env.TENCENT_SECRET_KEY != '' && env.PT_KEY != '' && env.PT_PIN != '' }}"
         run: |
           npm i
+          npm install got
           npm install -g serverless-cloud-framework
           # npm i -g serverless
       - name: deploy
