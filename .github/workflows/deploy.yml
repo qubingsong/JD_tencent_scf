@@ -46,7 +46,7 @@ jobs:
         if: "${{ env.TENCENT_SECRET_ID != '' && env.TENCENT_SECRET_KEY != '' && env.PT_KEY != '' && env.PT_PIN != '' }}"
         run: |
           npm i
-          npm i -g serverless
+          npm i -g serverless serverless-tencent
       - name: deploy
         if: "${{ env.TENCENT_SECRET_ID != '' && env.TENCENT_SECRET_KEY != '' && env.PT_KEY != '' && env.PT_PIN != '' }}"
         run: |
