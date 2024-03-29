@@ -21,6 +21,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
       - name: set serverless.yml and push env
         run: |
           if [[ ! -z $TENCENT_REGION ]]; then sed -i -E 's/region:[^\n]+/region: '"$TENCENT_REGION"'/' serverless.yml; fi;
